@@ -1,17 +1,12 @@
 import nltk
 from nltk import FreqDist 
 from nltk import word_tokenize
-
 class processor: 
 
     def __init__(self): 
-        self.keywords = ['you',  'bitch', 'ur', 'your', 'fucking', 'fuck', 'u', 'stop', 'asshole', 'crusty', 'roommate', 'hate', 'cares', 'left', 'shoutout', 'shut', 'trust', 
-        'need', 'dear', 'stupid', 'aztec', 'cunt', 'dumbass', 'needs', 'sincerely', 'sorority', 'yourself', 'bunk', 'stealing', 'stole',
-        'cute', 'issue', 'want', 'hmu', 'someone', 'pipe', 'where', 'tryna', 'relationship', 'dick', 'chill', 'buddy', 'respond', 'twink', 'looking', 'hot', 'suck', 'guy', 
-        'girl', 'anyone', 'm', 'talk', 'gmail', 'number', 'orgasms', 'hell', 'session', 'smash', 'fine', 'down']
-        self.keyphrases = ['sugar daddy', 'would fuck', 'brains out'
-        'fuck off', 'to the', 'sick of it', 'piece of shit']
-        self.wordscount = 60
+        self.keywords = []
+        self.keyphrases = []
+        self.wordscount = 133
         self.callcount = 0
         self.seekcount = 0
         self.paths = [r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\Callout.txt',   
@@ -69,7 +64,7 @@ class processor:
            
 test = processor()
 items = test.freq()
-tfile = open(r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\seeking.txt', "r")
+tfile = open(r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\personals.txt', "r")
 for line in tfile:
     test.prob(line)
 tfile.close()
