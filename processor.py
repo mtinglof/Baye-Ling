@@ -1,3 +1,7 @@
+# This program is an introduction to Naive Bayes text classifier. 
+# The main difference between this program and other Naïve Bayes classifiers is that this program uses key word determination. 
+# This means that the probability of certain words are calculated rather than all words taken together as a whole. 
+
 import nltk
 from nltk import bigrams 
 from nltk import collocations
@@ -11,8 +15,7 @@ class processor:
         self.call_count = 0
         self.seek_count = 0
         self.personal_count = 0
-        self.paths = [r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\Callout.txt',   
-         r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\seeking.txt', r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\personals.txt']
+        self.paths = []
         self.tokens = {}
         self.call_dic = {}
         self.seek_dic = {}
@@ -38,6 +41,10 @@ class processor:
             self.call_dic[word] = call_dist[word]
             self.seek_dic[word] = seeking_dist[word]
             self.personal_dic[word] = personal_dist[word]
+
+            # This section is commented out as I was testing different probability factors. 
+            # One factor was the amount of times a certain word may appear throughout different sections of text.  
+
             # self.call_count = call_dist[word] + self.call_count
             # self.seek_count = seeking_dist[word] + self.seek_count
             # self.personal_count = personal_dist[word] + self.personal_count
@@ -46,6 +53,9 @@ class processor:
         for word in submit:
             subtoken = word_tokenize(submit)
         same_words = []
+
+        # As stated above, this section is commented to test whether word frequency as a correction to a greater predictability with text classification. 
+
         # seek_word_total = self.seek_count + self.words_count
         # call_word_total = self.call_count + self.words_count
         # personal_word_total = self.personal_count + self.words_count
@@ -62,6 +72,9 @@ class processor:
         per_call = prob_call/(prob_call+prob_seek)
         per_seek = prob_seek/(prob_call+prob_seek)
         per_personal = prob_personal/(prob_call+prob_seek+prob_personal)
+
+        # Commented section for working with different probabilities to optimize better text classification.  
+
         # f = open("results.txt", "a")
         # if .75 > per_call and .75 > per_seek: 
         #     f.write("Personal " + str(per_seek) + " " + str(per_call) + "\n")
