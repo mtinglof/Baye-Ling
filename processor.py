@@ -1,4 +1,7 @@
-# This program is an introduction to Naive Bayes text classifier. 
+# This program was created in correlation with a computational linguistics class. 
+# Main emphasis was in using the python package Natural Language Toolkit, found here https://www.nltk.org/ 
+
+# This program is my introduction to Naive Bayes text classifier.
 # The main difference between this program and other Naïve Bayes classifiers is that this program uses key word determination. 
 # This means that the probability of certain words are calculated rather than all words taken together as a whole. 
 
@@ -87,7 +90,7 @@ class processor:
            
 test = processor()
 items = test.freq()
-tfile = open(r'C:\Users\mting\Documents\Baye Ling\Baye-Ling\personals.txt', "r")
+tfile = open("", "r")
 for line in tfile:
     test.prob(line)
 tfile.close()
