@@ -42,12 +42,12 @@ Pull requests are gladly welcomed, just fork the repository and create a feature
 
 ## Links
 
-Professor Homepage: https://malouf.sdsu.edu/
-Repository: https://github.com/mtinglof/Computational-Ling-Class
-Chrome Driver: http://chromedriver.chromium.org/getting-started
-Natural Language Toolkit: https://www.nltk.org/ 
-Hedonometer Team: https://hedonometer.org
-My Homepage: https://github.com/mtinglof
+- Professor Homepage: https://malouf.sdsu.edu/
+- Repository: https://github.com/mtinglof/Computational-Ling-Class
+- Chrome Driver: http://chromedriver.chromium.org/getting-started
+- Natural Language Toolkit: https://www.nltk.org/ 
+- Hedonometer Team: https://hedonometer.org
+- My Homepage: https://github.com/mtinglof
 
 ## Licensing
 
