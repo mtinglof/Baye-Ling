@@ -1,7 +1,7 @@
 # This project was created for my computational linguistics class. 
 # Three methods are included within the program, each can be called separately to achieve different tasks. 
 # Class Sentiment complies a dictionary of word sentiments based off the site https://hedonometer.org/ using web scraping techniques. 
-# Token tokenized passed Strings for use in other areas of the program. Stat complies certain stats of strings passed. 
+# Token finds most common ngrams and words within text file. Stat complies certain stats of strings passed. 
 
 import nltk
 from nltk import bigrams 
@@ -26,6 +26,8 @@ class lingpersonal:
         self.sentdic = {}
         self.browser = webdriver.Chrome(executable_path=r'') 
     
+    # Class removes punctuation and simultaneously creates a dictionary of word sentiment while assigning sentence sentiment score. 
+    # Optimization of sentiment class is needed for future projects.  
     def sentiment(self):
         self.browser.create_options()
         self.browser.get(self.starting_url)
